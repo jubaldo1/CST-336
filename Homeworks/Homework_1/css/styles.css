@@ -49,7 +49,12 @@ nav {
 }
 
 #sources {
-    text-align: center;
-    font-size: 2em;
-    color: red;
+    padding-left: center;
+    font-size: 1em;
+    color: white;
+}
+
+table {
+    background-color: white;
+    border: 2px black solid;
 }
