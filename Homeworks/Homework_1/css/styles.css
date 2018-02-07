@@ -1,8 +1,38 @@
-#index {
+body {
     background-color: black;
     color: white;
 }
 
 .footer {
     color: gray;
+}
+
+.titles {
+    color: red;
+    text-align: center;
+    font-size: 5em;
+}
+
+.subtitles {
+    text-align: center;
+    font-size: 3em;
+}
+
+nav a {  
+    padding:15px;
+    padding-bottom:4px;
+    font-size: 3em;
+    text-decoration:  none; 
+    color: white;
+}
+
+nav a:hover { 
+    border:2px orange solid;
+    font-size: 2.5em;
+    background-color: orange;
+    transition: .9s;
+}
+
+nav {
+    text-align: center;
 }

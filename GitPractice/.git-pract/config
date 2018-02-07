@@ -1,0 +1,11 @@
+[core]
+	repositoryformatversion = 0
+	filemode = true
+	bare = false
+	logallrefupdates = true
+[remote "GHtest"]
+	url = https://github.com/jubaldo1/testgit.git
+	fetch = +refs/heads/*:refs/remotes/GHtest/*
+[remote "ivGit"]
+	url = https://github.com/IvonneS/gittest.git
+	fetch = +refs/heads/*:refs/remotes/ivGit/*
