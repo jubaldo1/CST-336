@@ -10,6 +10,26 @@ footer {
     text-align: center !important;
 }
 
+nav a {  
+    padding:15px;
+    padding-bottom:4px;
+    font-size: 3em;
+    text-decoration:  none; 
+    color: white;
+}
+
+nav a:hover { 
+    border:2px white solid;
+    font-size: 2.5em;
+    background-color: red;
+    transition: .9s;
+}
+
+nav {
+    text-align: center;
+}
+
+
 .titles {
     color: red;
     text-align: center;
@@ -28,21 +48,8 @@ footer {
     font-size: 1.5em;
 }
 
-nav a {  
-    padding:15px;
-    padding-bottom:4px;
-    font-size: 3em;
-    text-decoration:  none; 
-    color: white;
-}
-
-nav a:hover { 
-    border:2px white solid;
-    font-size: 2.5em;
-    background-color: red;
-    transition: .9s;
-}
-
-nav {
+#sources {
     text-align: center;
+    font-size: 2em;
+    color: red;
 }
