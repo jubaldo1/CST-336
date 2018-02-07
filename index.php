@@ -1,4 +1,5 @@
-<?php
+<?php?>
+<!DOCTYPE html>
 <html>
     <head>
         <title>Index</title>
@@ -12,4 +13,3 @@
         </div>
     </body>
 </html>
-?>
