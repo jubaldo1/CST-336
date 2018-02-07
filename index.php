@@ -1,9 +1,15 @@
-<!DOCTYPE html>
+<?php
 <html>
     <head>
-        <title> </title>
+        <title>Index</title>
     </head>
     <body>
-        <?php include_once("index.html"); ?>
+        <div>
+            <a href="Labs">Labs</a>
+        </div>
+        <div>
+            <a href="Homeworks">Homeworks</a>
+        </div>
     </body>
 </html>
+?>
