@@ -29,6 +29,10 @@ nav {
     text-align: center;
 }
 
+table {
+    background-color: white;
+    border: 2px black solid;
+}
 
 .titles {
     color: red;
@@ -48,13 +52,17 @@ nav {
     font-size: 1.5em;
 }
 
+.image {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 75%;
+}
+
 #sources {
-    padding-left: center;
+    padding-left: 25%;
     font-size: 1em;
     color: white;
 }
 
-table {
-    background-color: white;
-    border: 2px black solid;
-}
+
