@@ -14,5 +14,8 @@
         <div>
             <a href="Challenges">Challenges</a>
         </div>
+        <div>
+            <a href="Examples">Examples</a>
+        </div>
     </body>
 </html>

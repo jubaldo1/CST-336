@@ -1,0 +1,11 @@
+[19-Feb-2018 16:28:58 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/ubuntu/workspace/Example/Array/Arrays.php on line 32
+[19-Feb-2018 16:29:41 UTC] PHP Warning:  array_push() expects parameter 1 to be array, string given in /home/ubuntu/workspace/Example/Array/Arrays.php on line 21
+[19-Feb-2018 16:29:41 UTC] PHP Stack trace:
+[19-Feb-2018 16:29:41 UTC] PHP   1. {main}() /home/ubuntu/workspace/Example/Array/Arrays.php:0
+[19-Feb-2018 16:29:41 UTC] PHP   2. array_push() /home/ubuntu/workspace/Example/Array/Arrays.php:21
+[19-Feb-2018 16:30:40 UTC] PHP Warning:  array_push() expects parameter 1 to be array, string given in /home/ubuntu/workspace/Example/Array/Arrays.php on line 21
+[19-Feb-2018 16:30:40 UTC] PHP Stack trace:
+[19-Feb-2018 16:30:40 UTC] PHP   1. {main}() /home/ubuntu/workspace/Example/Array/Arrays.php:0
+[19-Feb-2018 16:30:40 UTC] PHP   2. array_push() /home/ubuntu/workspace/Example/Array/Arrays.php:21
+[19-Feb-2018 16:34:21 UTC] PHP Parse error:  syntax error, unexpected 'var_dump' (T_STRING), expecting ',' or ';' in /home/ubuntu/workspace/Example/Array/Arrays.php on line 30
+[19-Feb-2018 16:38:17 UTC] PHP Fatal error:  Only variables can be passed by reference in /home/ubuntu/workspace/Example/Array/Arrays.php on line 36
