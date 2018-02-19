@@ -11,5 +11,8 @@
         <div>
             <a href="Homeworks">Homeworks</a>
         </div>
+        <div>
+            <a href="Challenges">Challenges</a>
+        </div>
     </body>
 </html>
