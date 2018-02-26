@@ -1,11 +1,6 @@
 <?php
-    function displayAdvt($n, $c, $t)
+    function whateverTheyAre($c)
     {
-        echo "Once upon a time, there was a ". $c
-        . " named " . $n .". <br> They wanted to find the
-        greatest";
-        
-        // fix this
         if ($c === 'doggie')
         {
             echo " bone.<br>";
@@ -18,18 +13,44 @@
         {
             echo " some other thing.<br>";
         }
+    }
+
+    function displayAdvt($n, $c, $t)
+    {
+        echo "Once upon a time, there was a ". $c
+        . " named " . $n .". <br> They wanted to find the
+        greatest";
+        
+        whateverTheyAre($c);
         
         echo " They searched far and wide, but " . $n
         . " could not find what they searched for... <br><br>
-        until they come across the dragon!";
+        until they come across the dragon!<br>";
+        
+        echo "The dragon then said, \"" . $t ." \" to the grand " . $n
+        . " that they'll find their precious ";
+        
+        whateverTheyAre($c);
+        
+        echo " somewhere else. Somewhere f";
+        
+        $num = rand(1,40);
+        
+        for ($i = 0; $i < $num; $i++)
+        {
+            echo "a";
+        }
+        
+        echo "r away. <br> They sighed and went that way. <br><br> <b> THE END </b>";
     }
     
     function displayInfo($n, $c, $t)
     {
         if (!empty($n) && !empty($c) && !empty($t))
             {
-                echo "Welcome, " . $n . "! <br>";
-                     displayAdvt($n, $c, $t);
+                echo "The Very Short Story of the " . $c . " " . $n . ": <br><br>";
+                
+                displayAdvt($n, $c, $t);
             }
             else {
                 if (empty($c))
