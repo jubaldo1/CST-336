@@ -1,14 +1,22 @@
+<?php
+    include 'inc/functions.php'
+?>
+
 <!DOCTYPE html>
 
 <html>
     <head>
         <title>Home Page</title>
-        <link href="css/styles.css" rel="stylesheet" type="text/css" />
-        <meta charset="utf-8" />
+        <style>
+            @import url("css/styles.css");
+        </style>
     </head>
     <body>
         <div class = "links">
-             <a href="start.php">Start Here</a>
+            <nav>
+                 <a href="start.php">Start</a>
+            </nav>
         </div>
+    
     </body>
 </html>
