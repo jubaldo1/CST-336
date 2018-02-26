@@ -1,6 +1,9 @@
 body {
     font-size: 20px;
     font-family: fantasy;
+    background-color: rgb(250, 250, 250);
+    padding: inherit;
+    text-align: center;
 }
 
 #welcome {

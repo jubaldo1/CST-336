@@ -1,10 +1,15 @@
 <?php
+    function displayAdvt($n, $f, $t)
+    {
+        echo "";
+    }
+    
     function displayInfo($n, $f, $t)
     {
         if (!empty($n) && !empty($f) && !empty($t))
             {
-                echo "Hey, " . $n . "!"
-                     . "Let's get this started: ";
+                echo "Welcome, " . $n . "! <br>";
+                     displayAdvt($n, $f, $t);
             }
             else {
                 if (empty($f))
