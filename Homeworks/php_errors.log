@@ -1,0 +1,13 @@
+[26-Feb-2018 02:03:03 UTC] PHP Fatal error:  Cannot use isset() on the result of a function call (you can use "null !== func()" instead) in /home/ubuntu/workspace/Homeworks/Homework_2/start.php on line 18
+[26-Feb-2018 02:03:31 UTC] PHP Fatal error:  Function name must be a string in /home/ubuntu/workspace/Homeworks/Homework_2/start.php on line 18
+[26-Feb-2018 02:03:31 UTC] PHP Stack trace:
+[26-Feb-2018 02:03:31 UTC] PHP   1. {main}() /home/ubuntu/workspace/Homeworks/Homework_2/start.php:0
+[26-Feb-2018 02:06:16 UTC] PHP Fatal error:  Function name must be a string in /home/ubuntu/workspace/Homeworks/Homework_2/start.php on line 18
+[26-Feb-2018 02:06:16 UTC] PHP Stack trace:
+[26-Feb-2018 02:06:16 UTC] PHP   1. {main}() /home/ubuntu/workspace/Homeworks/Homework_2/start.php:0
+[26-Feb-2018 02:06:25 UTC] PHP Fatal error:  Function name must be a string in /home/ubuntu/workspace/Homeworks/Homework_2/name.php on line 9
+[26-Feb-2018 02:06:25 UTC] PHP Stack trace:
+[26-Feb-2018 02:06:25 UTC] PHP   1. {main}() /home/ubuntu/workspace/Homeworks/Homework_2/name.php:0
+[26-Feb-2018 02:06:57 UTC] PHP Fatal error:  Function name must be a string in /home/ubuntu/workspace/Homeworks/Homework_2/name.php on line 9
+[26-Feb-2018 02:06:57 UTC] PHP Stack trace:
+[26-Feb-2018 02:06:57 UTC] PHP   1. {main}() /home/ubuntu/workspace/Homeworks/Homework_2/name.php:0

@@ -2,9 +2,13 @@
 
 <html>
     <head>
-        <title>Start Page</title>
+        <title>Home Page</title>
+        <link href="css/styles.css" rel="stylesheet" type="text/css" />
+        <meta charset="utf-8" />
     </head>
     <body>
-        <a href="login.php">Login Here</a>
+        <div class = "links">
+             <a href="start.php">Start Here</a>
+        </div>
     </body>
 </html>
