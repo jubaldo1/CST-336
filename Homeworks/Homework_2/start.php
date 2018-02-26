@@ -44,6 +44,7 @@
                 <br  />
                 
                 <!-- Typing in text    -->
+                Type in anything here. Anything:<br>
                 <textarea name="text" cols="20" rows="3"></textarea>
                 
                 <br  />

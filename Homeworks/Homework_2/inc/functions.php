@@ -5,7 +5,23 @@
         . " named " . $n .". <br> They wanted to find the
         greatest";
         
-        //if ($f == )
+        // fix this
+        if ($c === 'doggie')
+        {
+            echo " bone.<br>";
+        }
+        else if ($c === 'warrior')
+        {
+            echo " treasure.<br>";
+        }
+        else if ($c === 'thing')
+        {
+            echo " some other thing.<br>";
+        }
+        
+        echo " They searched far and wide, but " . $n
+        . " could not find what they searched for... <br><br>
+        until they come across the dragon!";
     }
     
     function displayInfo($n, $c, $t)

@@ -11,6 +11,7 @@
             @import url("css/styles.css");
         </style>
     </head>
+    
     <body>
         <div>
             <p>Welcome to the Homework 2! Please click below to start.</p>
