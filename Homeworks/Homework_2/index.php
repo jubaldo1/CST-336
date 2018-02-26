@@ -23,8 +23,8 @@
     <footer>
         <hr />
         CST 336: Internet Programming. 2018&copy; Ubaldo <br />
-        <strong>Disclaimer:</strong>Homework 1<br />
-        This is my Homework 1.
+        <strong>Disclaimer: </strong>Homework 2<br />
+        This is my Homework 2.
         <img src="img/oteer.jpg" alt="CSUMB logo" />
     </footer>
 </html>
