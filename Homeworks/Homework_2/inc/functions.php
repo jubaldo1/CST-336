@@ -1,34 +1,30 @@
 <?php
-    // $name = NULL;
-    // $gender = NULL;
-    // $text = "...";
-
-    function displayInfo($name, $gender, $text)
+    function displayInfo($n, $f, $t)
     {
-        if (!empty($name) && !empty($gender) && !empty($text))
+        if (!empty($n) && !empty($f) && !empty($t))
             {
-                echo 'Hey, ' . $name . '!';
+                echo "Hey, " . $n . "!"
+                     . "Let's get this started: ";
             }
             else {
-                if (empty($gender))
+                if (empty($f))
                 {
                     echo "Hey, there is no way to know what you're supposed to be! <br>";
                 }
-                else if (empty($name))
+                else if (empty($n))
                 {
-                    echo "Hey, you have no name! Go back and do it again! <br>";
+                    echo "Hey, you didn't give a name! <br>";
                 }
-                
+                else if (empty($t))
+                {
+                    echo "Hey! You didn't say anything! <br>";
+                }
                 echo "<a href=". 'start.php' .">Return from whence you came.</a>";
             }
     }
     
-    function gimme($name, $gender, $text)
+    function gimme($n, $f, $t)
     {
-        // $GLOBALS['name'] = $n;
-        // $GLOBALS['gender'] = $g;
-        // $GLOBALS['text'] = $t;
-        
-        displayInfo($name, $gender, $text);
+        displayInfo($n, $f, $t);
     }
 ?>

@@ -14,7 +14,7 @@
         
         <!-- Navigation -->
         <nav>
-            <a href="index.php">Start</a>
+            <a href="start.php">Start</a>
         </nav>
         
          <div>

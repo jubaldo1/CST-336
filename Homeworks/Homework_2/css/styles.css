@@ -1,3 +1,14 @@
+body {
+    font-size: 20px;
+    font-family: fantasy;
+}
+
+#welcome {
+    padding: 50%;
+    font-size: 40px;
+    font-family: fantasy;
+}
+
 nav a{
     font-size: 40px;
     padding: 15px;

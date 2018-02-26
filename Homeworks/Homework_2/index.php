@@ -6,16 +6,15 @@
 
 <html>
     <head>
-        <title>Home Page</title>
+        <title>Welcome Page</title>
         <style>
             @import url("css/styles.css");
         </style>
     </head>
     <body>
-        <div class = "links">
-            <nav>
-                 <a href="start.php">Start</a>
-            </nav>
+        <div>
+            <p>Welcome to the Homework 2! Please click below to start.</p>
+            <a href="start.php">Welcome!</a>
         </div>
     
     </body>
