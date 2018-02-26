@@ -23,10 +23,13 @@
         
         <div>
             <form action="submit.php" method="post">
+                <!--Adding a name-->
                 Please enter your name here:
                 <input type="text" name="name"/>
-                <br><br>
+                <br  />
+                <br  />
                 
+                <!--Selecting a preference-->
                 Select how you would like to be referred to:<br>
                 <input type="radio" id="genderM" name="genderChoice">
                     <label for="genderM">He</label>
@@ -36,12 +39,16 @@
                     <br>
                 <input type="radio" id="genderT" name="genderChoice">
                     <label for="genderT">They</label>
-                    <br>
-                    <br>
-                    
-                <textarea id="text" cols="20" rows="3"></textarea>
+                
+                <br  />
+                <br  />
+                
+                <!-- Typing in text    -->
+                <textarea name="text" cols="20" rows="3"></textarea>
+                
+                <br  />
             
-            <!--Submit above info-->
+            <!-- Submit above info -->
             <input type="submit" value="Submit"/>
             
             </form>

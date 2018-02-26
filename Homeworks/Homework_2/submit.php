@@ -19,7 +19,7 @@
         
          <div>
             <?php
-                displayInfo($_POST["name"], $_POST["genderChoice"], $_POST[""], $_POST[""]);
+                gimme($_POST["name"], $_POST["genderChoice"], $_POST["text"]);
             ?>
         </div>
     </body>

@@ -1,7 +1,11 @@
 <?php
-    function displayInfo($name, $gender)
+    // $name = NULL;
+    // $gender = NULL;
+    // $text = "...";
+
+    function displayInfo($name, $gender, $text)
     {
-        if (!empty($name) && !empty($gender))
+        if (!empty($name) && !empty($gender) && !empty($text))
             {
                 echo 'Hey, ' . $name . '!';
             }
@@ -13,10 +17,18 @@
                 else if (empty($name))
                 {
                     echo "Hey, you have no name! Go back and do it again! <br>";
-                    
                 }
                 
                 echo "<a href=". 'start.php' .">Return from whence you came.</a>";
             }
+    }
+    
+    function gimme($name, $gender, $text)
+    {
+        // $GLOBALS['name'] = $n;
+        // $GLOBALS['gender'] = $g;
+        // $GLOBALS['text'] = $t;
+        
+        displayInfo($name, $gender, $text);
     }
 ?>
