@@ -3,15 +3,15 @@
     {
         if ($c === 'doggie')
         {
-            echo " bone.<br>";
+            echo "bone";
         }
         else if ($c === 'warrior')
         {
-            echo " treasure.<br>";
+            echo "treasure";
         }
         else if ($c === 'thing')
         {
-            echo " some other thing.<br>";
+            echo "some other thing";
         }
     }
 
@@ -19,11 +19,11 @@
     {
         echo "Once upon a time, there was a ". $c
         . " named " . $n .". <br> They wanted to find the
-        greatest";
+        greatest ";
         
         whateverTheyAre($c);
         
-        echo " They searched far and wide, but " . $n
+        echo ". They searched far and wide, but " . $n
         . " could not find what they searched for... <br><br>
         until they come across the dragon!<br>";
         
