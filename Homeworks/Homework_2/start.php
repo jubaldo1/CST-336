@@ -31,13 +31,13 @@
                 
                 <!--Selecting a preference-->
                 Select how you would like to be referred to:<br>
-                <input type="radio" id="human" name="choice">
-                    <label for="human">Human</label>
+                <input type="radio" value="warrior" name="choice">
+                    <label for="warrior">Human</label>
                     <br>
-                <input type="radio" id="dog" name="choice">
-                    <label for="dog">Doggie</label>
+                <input type="radio" value="doggie" name="choice">
+                    <label for="doggie">Doggie</label>
                     <br>
-                <input type="radio" id="thing" name="choice">
+                <input type="radio" value="thing" name="choice">
                     <label for="thing">The Thing</label>
                 
                 <br  />

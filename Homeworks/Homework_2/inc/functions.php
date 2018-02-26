@@ -1,18 +1,22 @@
 <?php
-    function displayAdvt($n, $f, $t)
+    function displayAdvt($n, $c, $t)
     {
-        echo "";
+        echo "Once upon a time, there was a ". $c
+        . " named " . $n .". <br> They wanted to find the
+        greatest";
+        
+        //if ($f == )
     }
     
-    function displayInfo($n, $f, $t)
+    function displayInfo($n, $c, $t)
     {
-        if (!empty($n) && !empty($f) && !empty($t))
+        if (!empty($n) && !empty($c) && !empty($t))
             {
                 echo "Welcome, " . $n . "! <br>";
-                     displayAdvt($n, $f, $t);
+                     displayAdvt($n, $c, $t);
             }
             else {
-                if (empty($f))
+                if (empty($c))
                 {
                     echo "Hey, there is no way to know what you're supposed to be! <br>";
                 }
@@ -28,8 +32,8 @@
             }
     }
     
-    function gimme($n, $f, $t)
+    function gimme($n, $c, $t)
     {
-        displayInfo($n, $f, $t);
+        displayInfo($n, $c, $t);
     }
 ?>
