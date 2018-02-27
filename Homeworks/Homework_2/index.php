@@ -14,7 +14,7 @@
     
     <body>
         <div>
-            <p>Welcome to the Homework 2! Please click below to start.</p>
+            <p>Welcome to the Homework 2!<br>Please click below to start.</p>
             <a href="start.php">Welcome!</a>
         </div>
     

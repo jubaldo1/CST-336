@@ -3,15 +3,15 @@
     {
         if ($c === 'doggie')
         {
-            echo "bone";
+            echo "Bone";
         }
         else if ($c === 'warrior')
         {
-            echo "treasure";
+            echo "Treasure";
         }
         else if ($c === 'thing')
         {
-            echo "some other thing";
+            echo "Something";
         }
     }
 
@@ -25,7 +25,7 @@
         
         echo ". They searched far and wide, but " . $n
         . " could not find what they searched for... <br><br>
-        until they come across the dragon!<br>";
+        until they come across the dragon!<br><br>";
         
         echo "The dragon then said, \"" . $t ." \" to the grand " . $n
         . " that they'll find their precious ";
@@ -34,7 +34,7 @@
         
         echo " somewhere else. Somewhere f";
         
-        $num = rand(1,40);
+        $num = rand(20,100);
         
         for ($i = 0; $i < $num; $i++)
         {
