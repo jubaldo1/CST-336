@@ -112,3 +112,8 @@ Stack trace:
 #0 /home/ubuntu/workspace/Labs/Lab4/index.php(84): PDOStatement->execute()
 #1 {main}
   thrown in /home/ubuntu/workspace/Labs/Lab4/index.php on line 84
+[12-Mar-2018 16:15:01 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '* DESC' at line 7 in /home/ubuntu/workspace/Labs/Lab4/index.php:85
+Stack trace:
+#0 /home/ubuntu/workspace/Labs/Lab4/index.php(85): PDOStatement->execute()
+#1 {main}
+  thrown in /home/ubuntu/workspace/Labs/Lab4/index.php on line 85

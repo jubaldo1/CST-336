@@ -6,7 +6,8 @@
     </head>
     <body>
         <div>
-            <a href="Labs">Labs</a>
+            <a href="Labs">Labs</a><br>
+            <a href="Labs/Lab4">Lab4</a>
         </div>
         <div>
             <a href="Homeworks">Homeworks</a>
