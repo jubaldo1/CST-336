@@ -46,3 +46,69 @@
 [21-Feb-2018 17:46:38 UTC] PHP Stack trace:
 [21-Feb-2018 17:46:38 UTC] PHP   1. {main}() /home/ubuntu/workspace/Labs/Lab3/functions.php:0
 [21-Feb-2018 17:46:38 UTC] PHP   2. array_push() /home/ubuntu/workspace/Labs/Lab3/functions.php:18
+[12-Mar-2018 06:42:45 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND deviceType 
+                // LIKE ''' at line 4' in /home/ubuntu/workspace/Labs/Lab4/index.php:60
+Stack trace:
+#0 /home/ubuntu/workspace/Labs/Lab4/index.php(60): PDOStatement->execute()
+#1 {main}
+  thrown in /home/ubuntu/workspace/Labs/Lab4/index.php on line 60
+[12-Mar-2018 06:43:00 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND deviceType 
+                LIKE ''' at line 4' in /home/ubuntu/workspace/Labs/Lab4/index.php:60
+Stack trace:
+#0 /home/ubuntu/workspace/Labs/Lab4/index.php(60): PDOStatement->execute()
+#1 {main}
+  thrown in /home/ubuntu/workspace/Labs/Lab4/index.php on line 60
+[12-Mar-2018 06:46:47 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'LIKE 'checkout')
+                AND deviceType 
+                LIKE 'laptop'' at line 3' in /home/ubuntu/workspace/Labs/Lab4/index.php:61
+Stack trace:
+#0 /home/ubuntu/workspace/Labs/Lab4/index.php(61): PDOStatement->execute()
+#1 {main}
+  thrown in /home/ubuntu/workspace/Labs/Lab4/index.php on line 61
+[12-Mar-2018 06:47:12 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'LIKE 'checkout')
+                AND deviceType 
+                LIKE 'laptop'' at line 3' in /home/ubuntu/workspace/Labs/Lab4/index.php:62
+Stack trace:
+#0 /home/ubuntu/workspace/Labs/Lab4/index.php(62): PDOStatement->execute()
+#1 {main}
+  thrown in /home/ubuntu/workspace/Labs/Lab4/index.php on line 62
+[12-Mar-2018 06:48:41 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'LIKE 'checkout')
+                AND deviceType 
+                LIKE 'laptop'' at line 3' in /home/ubuntu/workspace/Labs/Lab4/index.php:62
+Stack trace:
+#0 /home/ubuntu/workspace/Labs/Lab4/index.php(62): PDOStatement->execute()
+#1 {main}
+  thrown in /home/ubuntu/workspace/Labs/Lab4/index.php on line 62
+[12-Mar-2018 06:52:16 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'LIKE 'checkout')
+                AND deviceType 
+                LIKE 'laptop'' at line 3' in /home/ubuntu/workspace/Labs/Lab4/index.php:62
+Stack trace:
+#0 /home/ubuntu/workspace/Labs/Lab4/index.php(62): PDOStatement->execute()
+#1 {main}
+  thrown in /home/ubuntu/workspace/Labs/Lab4/index.php on line 62
+[12-Mar-2018 07:01:50 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'LIKE '*')
+                AND deviceType 
+                LIKE 'laptop'' at line 3' in /home/ubuntu/workspace/Labs/Lab4/index.php:62
+Stack trace:
+#0 /home/ubuntu/workspace/Labs/Lab4/index.php(62): PDOStatement->execute()
+#1 {main}
+  thrown in /home/ubuntu/workspace/Labs/Lab4/index.php on line 62
+[12-Mar-2018 07:03:07 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'LIKE '*')
+                AND deviceType 
+                LIKE 'laptop'' at line 3' in /home/ubuntu/workspace/Labs/Lab4/index.php:62
+Stack trace:
+#0 /home/ubuntu/workspace/Labs/Lab4/index.php(62): PDOStatement->execute()
+#1 {main}
+  thrown in /home/ubuntu/workspace/Labs/Lab4/index.php on line 62
+[12-Mar-2018 08:06:06 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '* ASC' at line 7' in /home/ubuntu/workspace/Labs/Lab4/index.php:84
+Stack trace:
+#0 /home/ubuntu/workspace/Labs/Lab4/index.php(84): PDOStatement->execute()
+#1 {main}
+  thrown in /home/ubuntu/workspace/Labs/Lab4/index.php on line 84
+[12-Mar-2018 08:16:28 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'WHERE (status LIKE 'available' OR status LIKE 'checkout')
+                AND
+  ' at line 3' in /home/ubuntu/workspace/Labs/Lab4/index.php:84
+Stack trace:
+#0 /home/ubuntu/workspace/Labs/Lab4/index.php(84): PDOStatement->execute()
+#1 {main}
+  thrown in /home/ubuntu/workspace/Labs/Lab4/index.php on line 84
