@@ -6,8 +6,11 @@
 <html>
     <head>
         <title> Home Page </title>
+        <style type="text/css">
+            @import url("css/styles.css");
+        </style>
     </head>
-    <body>
+    <body id = "body">
         <div>
             <form action="index.php" method="post">
                 <!--need name, type, availability, create table-->
@@ -15,7 +18,7 @@
                 <b>Type:</b> <input type="text" name="type">
                 <b>Availability:</b>
                 <input type="radio" name="avail" value="available"> Yes 
-                <input type="radio" name="avail" value="checkedout"> No
+                <input type="radio" name="avail" value="check"> No
                 <b>Order by:</b> 
                 <input type="radio" name="order" value="deviceName"> Name
                 <input type="radio" name="order" value="price"> Price
@@ -38,11 +41,11 @@
                 $conn = getDataBaseconnection("tech_checkout");
                 
                 
-                $name = "*";
-                $type = "*";
-                $avail1 = "available";
-                $avail2 = "Checkedout";
-                $order = "*";
+                $name = "";
+                $type = "";
+                $avail1 = "";
+                //$avail2 = "";
+                $order = "deviceName";
                 
                 // if name has info
                 if (isset($_POST['name']))
@@ -56,41 +59,18 @@
                 if (!empty($_POST['avail']))
                 {   // also check out 
                     $avail1 = $_POST['avail'];
-                    $avail2 = 'checkout';
+                    //$avail2 = 'checkout';
                 }
-                if (isset($_POST['order']))
+                if (!empty($_POST['order']))
                 {
                     $order = $_POST['order'];
                 }
                 
-                // use 
-                /*$sql = "SELECT * from `device`
-                WHERE (status
-                LIKE '$avail1' OR status LIKE '$avail2')
-                OR deviceType 
-                LIKE '$type'";
-                //deviceName 
-                //LIKE '$name'"; 
-                //*/ 
-                
                 $sql = "SELECT * FROM `device`
-                        WHERE status LIKE '$avail1' OR status LIKE '$avail2'
+                        WHERE status LIKE '%$avail1%'
+                        AND deviceName LIKE '%$name%'
+                        AND deviceType LIKE '%$type%'
                         ORDER BY $order ASC";
-                
-                // $sql = "SELECT * from `device`
-                // WHERE (status LIKE '$avail1' OR status LIKE '$avail2')
-                // AND
-                // (deviceType LIKE '$type')
-                // AND
-                // (deviceName LIKE '$name')
-                // ORDER BY $order DESC";
-                
-                //OR
-                //((status LIKE '$avail1' OR status LIKE '$avail2')
-                //AND deviceType LIKE '$type')";
-                //OR
-                //((status LIKE '$avail1' OR status LIKE '$avail2')";
-                ////OR deviceType LIKE '$type'))";
                 
                 // the ` symbol is needed for the SELECT,
                 // * is for selecting EVERYTHING
