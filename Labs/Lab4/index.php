@@ -24,6 +24,15 @@
             </form>
         </div>
         
+        <table border = "1">
+        
+        <tr>
+            <td border><b>Device Name</b></td>
+            <td><b>Device Type</b></td>
+            <td><b>Price</b></td>
+            <td><b>Status</b></td>
+        </tr>
+           
         <div>
             <?php
                 $conn = getDataBaseconnection("tech_checkout");
@@ -31,8 +40,8 @@
                 
                 $name = "*";
                 $type = "*";
-                $avail1 = "*";
-                $avail2 = "*";
+                $avail1 = "available";
+                $avail2 = "Checkedout";
                 $order = "*";
                 
                 // if name has info
@@ -44,7 +53,7 @@
                 {
                     $type  = $_POST['type'];
                 }
-                if (isset($_POST['avail']))
+                if (!empty($_POST['avail']))
                 {   // also check out 
                     $avail1 = $_POST['avail'];
                     $avail2 = 'checkout';
@@ -64,13 +73,17 @@
                 //LIKE '$name'"; 
                 //*/ 
                 
-                $sql = "SELECT * from `device`
-                WHERE (status LIKE '$avail1' OR status LIKE '$avail2')
-                AND
-                (deviceType LIKE '$type')
-                AND
-                (deviceName LIKE '$name')
-                ORDER BY $order DESC";
+                $sql = "SELECT * FROM `device`
+                        WHERE status LIKE '$avail1' OR status LIKE '$avail2'
+                        ORDER BY $order ASC";
+                
+                // $sql = "SELECT * from `device`
+                // WHERE (status LIKE '$avail1' OR status LIKE '$avail2')
+                // AND
+                // (deviceType LIKE '$type')
+                // AND
+                // (deviceName LIKE '$name')
+                // ORDER BY $order DESC";
                 
                 //OR
                 //((status LIKE '$avail1' OR status LIKE '$avail2')
@@ -90,10 +103,15 @@
                 // for each record, find the name
                 // Python dictionary style
                 foreach($records as $record){
-                echo $record['deviceName'] . " " . $record['deviceType'] 
-                . " " . $record['status'] . " " . $record['price'] ."<br>";
+                    echo '<tr>';
+                    echo '<td>' . $record['deviceName'] . '</td>'
+                     .   '<td>' . $record['deviceType'] . '</td>' 
+                     .   '<td>' . $record['status']     . '</td>'
+                     .   '<td>' . $record['price']      . '</td>';
+                    echo '</tr>';
                 }
             ?>
         </div>
+        </table>
     </body>
 </html>
