@@ -38,7 +38,7 @@
            
         <div>
             <?php
-                $conn = getDataBaseconnection("tech_checkout");
+                //$conn = getDataBaseconnection("tech_checkout");
                 
                 
                 $name = "";
@@ -74,7 +74,7 @@
                 
                 // the ` symbol is needed for the SELECT,
                 // * is for selecting EVERYTHING
-                $stmt = $conn->prepare($sql);
+                $stmt = $dbConn->prepare($sql);
                 $stmt->execute();
                 $records = $stmt->fetchALL(PDO::FETCH_ASSOC);
                 //print_r ($records);
