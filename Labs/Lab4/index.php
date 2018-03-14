@@ -1,5 +1,5 @@
  <?php
-    include 'DBConnection.php';
+    include 'DBConnectionMa.php';
  ?>
 
 <!DOCTYPE html>
