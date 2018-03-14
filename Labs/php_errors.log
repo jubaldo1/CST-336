@@ -182,3 +182,31 @@ Stack trace:
 #0 /home/ubuntu/workspace/Labs/Lab4/index.php(98): PDOStatement->execute()
 #1 {main}
   thrown in /home/ubuntu/workspace/Labs/Lab4/index.php on line 98
+[14-Mar-2018 15:56:24 UTC] PHP Notice:  Undefined variable: url in /home/ubuntu/workspace/Labs/Lab4/DBConnectionMa.php on line 3
+[14-Mar-2018 15:56:24 UTC] PHP Notice:  Undefined index: host in /home/ubuntu/workspace/Labs/Lab4/DBConnectionMa.php on line 5
+[14-Mar-2018 15:56:24 UTC] PHP Notice:  Undefined index: user in /home/ubuntu/workspace/Labs/Lab4/DBConnectionMa.php on line 7
+[14-Mar-2018 15:56:24 UTC] PHP Notice:  Undefined index: pass in /home/ubuntu/workspace/Labs/Lab4/DBConnectionMa.php on line 8
+[14-Mar-2018 15:56:24 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function getDataBaseconnection() in /home/ubuntu/workspace/Labs/Lab4/index.php:41
+Stack trace:
+#0 {main}
+  thrown in /home/ubuntu/workspace/Labs/Lab4/index.php on line 41
+[14-Mar-2018 15:56:29 UTC] PHP Notice:  Undefined variable: url in /home/ubuntu/workspace/Labs/Lab4/DBConnectionMa.php on line 3
+[14-Mar-2018 15:56:29 UTC] PHP Notice:  Undefined index: host in /home/ubuntu/workspace/Labs/Lab4/DBConnectionMa.php on line 5
+[14-Mar-2018 15:56:29 UTC] PHP Notice:  Undefined index: user in /home/ubuntu/workspace/Labs/Lab4/DBConnectionMa.php on line 7
+[14-Mar-2018 15:56:29 UTC] PHP Notice:  Undefined index: pass in /home/ubuntu/workspace/Labs/Lab4/DBConnectionMa.php on line 8
+[14-Mar-2018 15:56:29 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function getDataBaseconnection() in /home/ubuntu/workspace/Labs/Lab4/index.php:41
+Stack trace:
+#0 {main}
+  thrown in /home/ubuntu/workspace/Labs/Lab4/index.php on line 41
+[14-Mar-2018 16:00:54 UTC] PHP Notice:  Undefined variable: url in /home/ubuntu/workspace/Labs/Lab4/DBConnectionMa.php on line 3
+[14-Mar-2018 16:00:54 UTC] PHP Notice:  Undefined index: host in /home/ubuntu/workspace/Labs/Lab4/DBConnectionMa.php on line 5
+[14-Mar-2018 16:00:54 UTC] PHP Notice:  Undefined index: user in /home/ubuntu/workspace/Labs/Lab4/DBConnectionMa.php on line 7
+[14-Mar-2018 16:00:54 UTC] PHP Notice:  Undefined index: pass in /home/ubuntu/workspace/Labs/Lab4/DBConnectionMa.php on line 8
+[14-Mar-2018 16:00:58 UTC] PHP Notice:  Undefined variable: url in /home/ubuntu/workspace/Labs/Lab4/DBConnectionMa.php on line 3
+[14-Mar-2018 16:00:58 UTC] PHP Notice:  Undefined index: host in /home/ubuntu/workspace/Labs/Lab4/DBConnectionMa.php on line 5
+[14-Mar-2018 16:00:58 UTC] PHP Notice:  Undefined index: user in /home/ubuntu/workspace/Labs/Lab4/DBConnectionMa.php on line 7
+[14-Mar-2018 16:00:58 UTC] PHP Notice:  Undefined index: pass in /home/ubuntu/workspace/Labs/Lab4/DBConnectionMa.php on line 8
+[14-Mar-2018 16:01:01 UTC] PHP Notice:  Undefined variable: url in /home/ubuntu/workspace/Labs/Lab4/DBConnectionMa.php on line 3
+[14-Mar-2018 16:01:01 UTC] PHP Notice:  Undefined index: host in /home/ubuntu/workspace/Labs/Lab4/DBConnectionMa.php on line 5
+[14-Mar-2018 16:01:01 UTC] PHP Notice:  Undefined index: user in /home/ubuntu/workspace/Labs/Lab4/DBConnectionMa.php on line 7
+[14-Mar-2018 16:01:01 UTC] PHP Notice:  Undefined index: pass in /home/ubuntu/workspace/Labs/Lab4/DBConnectionMa.php on line 8

@@ -18,7 +18,7 @@ if ($hasConnUrl) {
 
 //var_dump($hasConnUrl);
 $host = $hasConnUrl ? $connParts['host'] : getenv('IP');
-$dbname = $hasConnUrl ? ltrim($connParts['path'],'/') : 'crime_tips';
+$dbname = $hasConnUrl ? ltrim($connParts['path'],'/') : 'tech_checkout';
 $username = $hasConnUrl ? $connParts['user'] : getenv('C9_USER');
 $password = $hasConnUrl ? $connParts['pass'] : '';
 
