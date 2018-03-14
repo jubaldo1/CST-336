@@ -1,5 +1,5 @@
 <?php
-function getDataBaseconnection($opt){
+//function getDataBaseconnection($opt){
     // $connParts = parse_url($url);
     
     // $host = $connParts['host'];
@@ -28,5 +28,5 @@ function getDataBaseconnection($opt){
     $dbConn -> setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);          // ERRMODE: error thrown
     
     //return $dbConn;
-}
+//}
 ?>
