@@ -236,3 +236,18 @@ Stack trace:
 [14-Mar-2018 16:08:16 UTC] PHP Notice:  Undefined index: host in /home/ubuntu/workspace/Labs/Lab4/DBConnectionMa.php on line 5
 [14-Mar-2018 16:08:16 UTC] PHP Notice:  Undefined index: user in /home/ubuntu/workspace/Labs/Lab4/DBConnectionMa.php on line 7
 [14-Mar-2018 16:08:16 UTC] PHP Notice:  Undefined index: pass in /home/ubuntu/workspace/Labs/Lab4/DBConnectionMa.php on line 8
+[14-Mar-2018 16:14:47 UTC] PHP Notice:  Undefined variable: dbConn in /home/ubuntu/workspace/Labs/Lab4/index.php on line 77
+[14-Mar-2018 16:14:47 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/ubuntu/workspace/Labs/Lab4/index.php:77
+Stack trace:
+#0 {main}
+  thrown in /home/ubuntu/workspace/Labs/Lab4/index.php on line 77
+[14-Mar-2018 16:14:52 UTC] PHP Notice:  Undefined variable: dbConn in /home/ubuntu/workspace/Labs/Lab4/index.php on line 77
+[14-Mar-2018 16:14:52 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/ubuntu/workspace/Labs/Lab4/index.php:77
+Stack trace:
+#0 {main}
+  thrown in /home/ubuntu/workspace/Labs/Lab4/index.php on line 77
+[14-Mar-2018 16:14:54 UTC] PHP Notice:  Undefined variable: dbConn in /home/ubuntu/workspace/Labs/Lab4/index.php on line 77
+[14-Mar-2018 16:14:54 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/ubuntu/workspace/Labs/Lab4/index.php:77
+Stack trace:
+#0 {main}
+  thrown in /home/ubuntu/workspace/Labs/Lab4/index.php on line 77
