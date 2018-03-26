@@ -20,7 +20,7 @@
     
     <?php
     include 'inc/functions.php';
-    
+    /*
     // Start the session in any php file where you will be using sessions
     session_start();
     
@@ -60,7 +60,7 @@
             $newItem['quantity'] = 1;
             array_push($_SESSION['cart'], $newItem);
         }
-    }
+    }*/
 ?>
 
     <table border = "1">
