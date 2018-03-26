@@ -19,7 +19,7 @@
             <a href="Examples">Examples</a>
         </div>
         <div>
-            <a href="Team_Project/Team_Project">Team Project</a>
+            <a href="Team_Project">Team Project</a>
         </div>
     </body>
 </html>
