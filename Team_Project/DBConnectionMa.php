@@ -9,7 +9,7 @@
         $connParts = parse_url($connUrl);
     }
 
-    //var_dump($hasConnUrl);
+    var_dump($hasConnUrl);
     
     $host = $hasConnUrl ? $connParts['host'] : getenv('IP');
     $dbname = $hasConnUrl ? ltrim($connParts['path'],'/') : 'Recipes';
