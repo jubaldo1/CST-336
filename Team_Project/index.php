@@ -1,3 +1,7 @@
+ <?php
+    include 'DBConnectionMa.php';
+ ?>
+
 <!DOCTYPE html>
 <html>
     <head>
