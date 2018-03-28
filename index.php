@@ -19,7 +19,10 @@
             <a href="Examples">Examples</a>
         </div>
         <div>
-            <a href="Team_Project">Team Project</a>
+            <a href="T">Team Project</a>
+        </div>
+        <div>
+            <a href="Exams">Exams</a>
         </div>
     </body>
 </html>

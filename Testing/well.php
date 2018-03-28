@@ -1,5 +1,5 @@
  <?php
-    include 'DBConnectionMa.php';
+    include 'DBConnection.php';
  ?>
 
 <!DOCTYPE html>
@@ -35,8 +35,6 @@
     
      // Checks to see if the search form has been submitted
     if (isset ($_GET['query'])) {
-        // Get access to our API function
-        //include 'wmapi.php';
         $items = getProducts($_GET['query']);
     }
     
@@ -74,6 +72,7 @@
            
         <div>
             <?php
+             $dbConn = getDataBaseconnection("Recipes");
                 $name = "";
                 
                 // if name has info
@@ -82,8 +81,7 @@
                     $name  = $_POST['name'];
                 }
                 
-                $sql = "SELECT * FROM `Recipe`
-                        WHERE name LIKE '%$name%'";
+                $sql = "SELECT * FROM `Recipe`";
                 
                 // the ` symbol is needed for the SELECT,
                 // * is for selecting EVERYTHING
@@ -96,10 +94,11 @@
                 // for each record, find the name
                 // Python dictionary style
                 foreach($records as $record){
-                    echo '<tr>';
-                    echo '<td>' . $record['name'] . '</td>';
-                   
-                    echo '</tr>';
+                    echo "<tr>";
+                    echo "<td>";
+                    echo $record['name'];
+                    echo "</td>";
+                    echo "</tr>";
                 }
             ?>
         </div>
