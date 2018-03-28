@@ -16,7 +16,7 @@
             <a href="Challenges">Challenges</a>
         </div>
         <div>
-            <a href="Examples">Examples</a>
+            <a href="Example">Examples</a>
         </div>
         <div>
             <a href="T">Team Project</a>
