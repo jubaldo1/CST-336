@@ -22,7 +22,7 @@
             <a href="T">Team Project</a>
         </div>
         <div>
-            <a href="Exams">Exams</a>
+            <a href="midterm"><b>Midterm</b></a>
         </div>
     </body>
 </html>

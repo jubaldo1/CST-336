@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> </title>
+    </head>
+    <body>
+        <script>
+            
+            // 1.Arguments
+            
+            printName("hello", "goodbye")
+            
+            function printName(greeting) {
+                console.log(greeting);
+                console.log(arguments[1]);
+            }
+            
+            
+            // 2. Variables
+            console.log("#2 Variables ")
+            var testName = "Jason";
+            
+            testName = function(text) {
+                console.log(text);
+            }
+            
+            console.log(testName);
+            
+            
+            
+            // 3. Function execution, Function Return, undefined
+            
+            console.log(testName("Bella"))
+           
+           // return is "undefined" if not defined!
+           // also, the below throus up an error because interetRate is not a function
+            /*var interestRate = 9.5;
+            var results = interestRate(15);
+            console.log(results);
+            */
+            // 4. Objects
+            var person = {
+                firstName: "Jason",
+                lastName: "Henderson",
+                eyeColor: "green"
+            }
+            
+            person.walk = function(speed)
+            {   // setTimeout runs something every set amount of time
+                setTimeout(function() {
+                    person.walk(speed);
+                }, speed/1000);
+                console.log("stepping");
+            }
+            
+            console.log(person.firstName);
+            person.walk(4);
+            
+            // 5.Scope
+             var kitchen = function(cuisine, city, lang) {
+                var self = this;
+                
+                this.language = lang;
+                
+                var instance {
+                    
+                    city: city,
+                    cuisine: translate(this.language, cuisine),
+                    menu: [{
+                        ingredients: ['wheat flour', 'baking soda', 'water'],
+                        result: this.bake(this.ingredients)
+                    }],
+                    bake: function(ingredients) {
+                        return ingredients;
+                    }
+                }
+                
+                return instance;
+                
+                function translate(lang, word) {
+                    switch (lang) {
+                        case 'en-US':
+                            return word;
+                            break;
+                        case 'fr':
+                            return 'do not know';
+                            break;
+                        default:
+                            return null;
+                            break;
+                    }
+                }
+            }("bread", "marina", "fr").menu[0].result;
+            
+            
+        </script>
+    </body>
+</html>
