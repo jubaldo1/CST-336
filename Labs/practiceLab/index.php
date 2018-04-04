@@ -20,9 +20,6 @@
                 <input type="submit" value="Log In">
             </div>
         </form>
-        <!--<form action="./logoff.php">-->
-        <!--    <input type="submit" value="Log Off">-->
-        <!--</form>-->
         
         <div>
             <hr>

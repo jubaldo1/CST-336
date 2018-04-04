@@ -21,12 +21,11 @@
             
             
             <?php
-                
+                // get the passed info
                 if (isset($_SESSION['user']) || isset($_SESSION['pass']))
                 {
                     $userName = $_SESSION['user'];
                     $passWord = $_SESSION['pass'];
-                    echo "admin?: " . $userName;
                 }
                 
                 if (($userName=="admin")&&($passWord=="s3cr3t"))
@@ -37,7 +36,6 @@
                              <input type='radio' name='adminStuff' value='delete'> Delete User<br>
                              <input type='submit' name='Submit'>
                              </form>";
-                    echo "why is this showing?";
                     if (isset($_POST['adminStuff']))
                     {
                         $conn = getDataBaseconnection("lab6");
@@ -54,12 +52,33 @@
                         $stmt->execute();
                         $record = $stmt->fetch();
                         
-                        echo $_POST['adminStuff'];
                         $adminToDo = $_POST['adminStuff'];
                     
                         if ($adminToDo=="create")
                         {
+                            echo "
+                                <h3>Creating a new User Account:</h3>
+                                <form method='post'>
+                                    First name: <input type='text' name='newFirst'><br>
+                                    Last name: <input type='text' name='newLast'><br>
+                                    Username: <input type='text' name='newUser'><br>
+                                    Password: <input type='text' name='newPass'><br>
+                                    <input type='submit' value='Create Account'>
+                                </form>";
                             
+                            if (isset($_POST['newFirst']))
+                            {
+                                echo $_POST['newFirst'];
+                            }
+                            /*
+                            $sql = "SELECT * FROM `users`
+                            WHERE '$userName' = username
+                            AND '$passWord' = password";
+                    
+                            // the ` symbol is needed for the SELECT,
+                            // * is for selecting EVERYTHING
+                            $stmt = $conn->prepare($sql);
+                            $stmt->execute();*/
                         }
                         else if (($adminToDo)=="update")
                         {
@@ -70,6 +89,10 @@
                             
                         }
                         
+                        if (isset($_POST['newFirst']))
+                            {
+                                echo $_POST['newFirst'];
+                            }
                     }
                 }
                 else
