@@ -3,6 +3,10 @@
     session_start();
     echo $_SESSION['user'];
     echo $_SESSION['pass'];
+
+    // want to ccreate forms so that the admin
+    // can put information into it to create a new user
+    // 
 ?>
 
 <!DOCTYPE html>
@@ -23,52 +27,14 @@
                 
                 if (($user=="admin") && ($pass=="s3cr3t"))
                 {
-                    $conn = getDataBaseconnection("lab6");
-                    
-                    // this is the part that checks if the username == "admin"
-                    // and password == "s3cr3t"
-                    
-                    
-                    
-                    $stmt = "INSERT INTO `users` 
-                             (
-                                id,
-                                username,
-                                password,
-                                firstname,
-                                lastname,
-                                isAdmin
-                             )
-                             VALUES
-                             (
-                                :id,
-                                :user,
-                                :pass,
-                                :first,
-                                :last,
-                                :adminStat
-                             )";
-                    
-                    // the ` symbol is needed for the SELECT,
-                    // * is for selecting EVERYTHING
-                    $stmt = $conn->prepare($sql);
-                    $stmt->execute(
-                                array
-                                (
-                                    ":id"=> ;
-                                    ":user"=> ;
-                                    ":pass"=> ;
-                                    ":first"=> ;
-                                    ":last"=> ;
-                                    ":adminStat"=> ;
-                                )
-                            );
-                    //$record = $stmt->fetch();
-                    
-                    //if (isset($_POST['user']) && isset($_POST['pass']))
-                    //{
-                    //    echo $user . "<br>" . $pass;
-                    //}
+                    echo "<div>
+                        What do you want to do?
+                        <form method='post'>
+                            <input type='radio' name='whatDo' value='create'> Create User<br>
+                            <input type='radio' name='whatDo' value='edit'> Edit User<br>
+                            <input type='radio' name='whatDo' value='delete'> Delete User<br>
+                        </form>
+                    </div>";
                 }
                 else {
                     echo "YOU ARE NOT AN ADMIN HOW DARE YOU";
