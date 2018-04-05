@@ -60,7 +60,7 @@
                     {
                         $_SESSION['user'] = $userName;
                         $_SESSION['pass'] = $passWord;
-                        header("Location: display.php");
+                        header("Location: user.php");
                     }
                 }
                 else {

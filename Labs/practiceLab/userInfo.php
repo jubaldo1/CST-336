@@ -1,8 +1,6 @@
 <?php 
     include 'DBConnection.php';
     session_start();
-
-    
 ?>
 <!--DOCTYPE html-->
 <html>
@@ -39,7 +37,9 @@
                 $stmt->execute();
                 $record = $stmt->fetch();
                 
-                echo 'Name: <a href= "./userInfo.php">' . $record['firstname'] . " " . $record['lastname'] . "</a><br>";
+                echo "Name: " . $record['firstname'] . " " . $record['lastname'] . "<br>
+                      Username: " . $record['username'] . "<br>
+                      Password: " . $record['password'] . "<br>";
             ?>
         </div>
     </body>

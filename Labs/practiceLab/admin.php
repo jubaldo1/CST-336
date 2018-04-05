@@ -1,6 +1,11 @@
 <?php 
     include 'DBConnection.php';
     session_start();
+    
+    if (isset($_POST['newFirst']))
+    { echo $_POST['newFirst']; }
+    else
+    { echo "No, it's not set"; }
 ?>
 <!--DOCTYPE html-->
 <html>
@@ -53,23 +58,22 @@
                         $record = $stmt->fetch();
                         
                         $adminToDo = $_POST['adminStuff'];
-                    
+                        
+                        // store action choice
+                        $_SESSION['adminToDo']=$adminToDo;
+                        
                         if ($adminToDo=="create")
                         {
-                            echo "
+                            echo '
                                 <h3>Creating a new User Account:</h3>
-                                <form method='post'>
-                                    First name: <input type='text' name='newFirst'><br>
-                                    Last name: <input type='text' name='newLast'><br>
-                                    Username: <input type='text' name='newUser'><br>
-                                    Password: <input type='text' name='newPass'><br>
-                                    <input type='submit' value='Create Account'>
-                                </form>";
+                                <form action="./admin.php" method="post">
+                                    First name: <input type="text" name="newFirst"><br>
+                                    Last name: <input type="text" name="newLast"><br>
+                                    Username: <input type="text" name="newUser"><br>
+                                    Password: <input type="text" name="newPass"><br>
+                                    <input type="submit" value="Create Account">
+                                </form>';
                             
-                            if (isset($_POST['newFirst']))
-                            {
-                                echo $_POST['newFirst'];
-                            }
                             /*
                             $sql = "SELECT * FROM `users`
                             WHERE '$userName' = username
@@ -82,17 +86,57 @@
                         }
                         else if (($adminToDo)=="update")
                         {
-                            
+                            // find the account
+                            echo '<h3>Find the user to update:</h3><br>
+                            <form>
+                                Username: <input type="text" name="newUser"><br>
+                                Password: <input type="text" name="newPass"><br>
+                                <input type="submit" value="Find User Account">
+                            </form>';
                         }
                         else if (($adminToDo)=="delete")
+                        {
+                            echo '<h3>Delete User:</h3>';
+                            
+                            $sql = "SELECT username,isAdmin FROM `users`";
+                    
+                            // the ` symbol is needed for the SELECT,
+                            // * is for selecting EVERYTHING
+                            $stmt = $conn->prepare($sql);
+                            $stmt->execute();
+                            $records=$stmt->fetchAll(PDO::FETCH_ASSOC);
+                            
+                            foreach ($records as $record) {
+                                if ($record['isAdmin']==0)
+                                {
+                                    echo 
+                                    "<form method='post'>
+                                        Username: <input type='radio' name='deleteUser' value=" . $record['username'] . ">".$record['username']."<br>";
+                                }
+                            }
+                            echo 
+                                    '<input type="submit" value="Delete User Account">
+                                </form>';
+                        }
+                    }
+                    else if (isset($_SESSION['adminToDo']))
+                    {
+                        $theAdminToDo = $_SESSION['adminToDo'];
+                        
+                        if ($theAdminToDo = "create")
+                        {
+                            
+                        }
+                        else if ($theAdminToDo = "update")
+                        {
+                            
+                        }
+                        else if ($theAdminToDo = "delete")
                         {
                             
                         }
                         
-                        if (isset($_POST['newFirst']))
-                            {
-                                echo $_POST['newFirst'];
-                            }
+                        
                     }
                 }
                 else
