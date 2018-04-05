@@ -125,7 +125,13 @@
                         
                         if ($theAdminToDo = "create")
                         {
-                            
+                            $sql = "SELECT username,isAdmin FROM `users`";
+                    
+                            // the ` symbol is needed for the SELECT,
+                            // * is for selecting EVERYTHING
+                            $stmt = $conn->prepare($sql);
+                            $stmt->execute();
+                            $records=$stmt->fetchAll(PDO::FETCH_ASSOC);
                         }
                         else if ($theAdminToDo = "update")
                         {
