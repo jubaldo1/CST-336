@@ -6,6 +6,8 @@
     { echo $_POST['newFirst']; }
     else
     { echo "No, it's not set"; }
+    
+    echo $_SESSION['adminToDo'];
 ?>
 <!--DOCTYPE html-->
 <html>
@@ -125,13 +127,40 @@
                         
                         if ($theAdminToDo = "create")
                         {
-                            $sql = "SELECT username,isAdmin FROM `users`";
+                            if (isset($_POST['newFirst']))
+                            {
+                            
+                                $sql = "INSERT INTO `users`(
+                                        `id`,
+                                        `username`,
+                                        `password`,
+                                        `firstname`,
+                                        `lastname`,
+                                        `isAdmin`
+                                    )
+                                    VALUES
+                                    (
+                                        [value-1],
+                                        [value-2],
+                                        [value-3],
+                                        [value-4],
+                                        [value-5],
+                                        [value-6]
+                                    )";
                     
                             // the ` symbol is needed for the SELECT,
                             // * is for selecting EVERYTHING
                             $stmt = $conn->prepare($sql);
-                            $stmt->execute();
-                            $records=$stmt->fetchAll(PDO::FETCH_ASSOC);
+                            $stmt->execute(array(
+                                        "[value-1]"=>NULL,
+                                        "[value-2]"=>$_POST['newFirst'],
+                                        "[value-3]"=>$_POST['newLast'],
+                                        "[value-4]"=>$_POST['newUser'],
+                                        "[value-5]"=>$_POST['newPass'],
+                                        "[value-6]"=>0
+                                        )
+                                );
+                            }
                         }
                         else if ($theAdminToDo = "update")
                         {
