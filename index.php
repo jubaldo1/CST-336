@@ -14,6 +14,7 @@
         </div>
         <div>
             <a href="Challenges">Challenges</a>
+            <a href="Challenges/challenge">Poll</a>
         </div>
         <div>
             <a href="Example">Examples</a>

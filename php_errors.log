@@ -825,3 +825,5 @@ Stack trace:
 [28-Mar-2018 16:55:20 UTC] PHP Notice:  Undefined index: numCols in /home/ubuntu/workspace/midterm/program1.php on line 30
 [28-Mar-2018 16:56:00 UTC] PHP Notice:  Undefined index: numRows in /home/ubuntu/workspace/midterm/program1.php on line 30
 [28-Mar-2018 16:56:00 UTC] PHP Notice:  Undefined index: numCols in /home/ubuntu/workspace/midterm/program1.php on line 30
+[10-Apr-2018 23:29:57 UTC] PHP Notice:  Undefined index: numRows in /home/ubuntu/workspace/midterm/program1.php on line 30
+[10-Apr-2018 23:29:57 UTC] PHP Notice:  Undefined index: numCols in /home/ubuntu/workspace/midterm/program1.php on line 30
