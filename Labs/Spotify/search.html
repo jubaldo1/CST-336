@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> </title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    </head>
+    <body>
+        <script>
+        $(function() {
+            $.ajax({
+            type: "GET",
+            url: "https://api.spotify.com/v1/search",
+            dataType: "json",
+            headers: {
+            'Authorization': 'Bearer ' + 'BQDEUQT99d6nnRm9MUXA2_0PTH3kvKgEkVk7uS4acKXL3992Wvq6G5H8FPrwlGZ6pzq0w3SwZ-5ctB8jZu7yaYQwPsQZGhzfQKezZfNV2Ziufh1mGUFNngal6nMk7UXnftaWp2WNvGk'
+        },
+        success: function(data, status) {
+//         console.log(data);
+//         for (var p = 0; p < data.playlists.items.length; p++) {
+//           var item = data.playlists.items[p];
+//           $(".container").append(
+//             $("<p>").append($("<img>").attr("src", item.images[0].url))
+//             )
+            
+//             console.log("Okay");
+            
+//             //        <div class="col-12 col-sm-6 col-md-3 px-0">
+//             var pictureColumnDiv = document.createElement("div");
+//             pictureColumnDiv.setAttribute("class", "col-12 col-sm-6 col-md-3 px-0");
+            
+//             var pictureImg = document.createElement("img");
+//             pictureImg.setAttribute("class", "mx-auto d-block img-fluid");
+//             pictureImg.setAttribute("src",item.images[0].url);
+//             pictureImg.setAttribute("alt","meh");
+//   // Very important step here!
+//   pictureColumnDiv.appendChild(pictureImg);
+        }
+      },
+      error: function(xhr) {
+        var response = JSON.parse(xhr.responseText);
+        console.log(response.error.message);
+      },
+      complete: function(data,status) {
+      },
+   });
+});
+        </script>
+        
+    </body>
+</html>

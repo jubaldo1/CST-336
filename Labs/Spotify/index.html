@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> </title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    </head>
+    <body>
+        <script>
+        $(function() {
+            $.ajax({
+            type: "GET",
+            url: "https://api.spotify.com/v1/browse/featured-playlists",
+            dataType: "json",
+            headers: {
+            'Authorization': 'Bearer ' + 'BQBh1bZ2ft0EX5C9fdmKKwyrdY_2WZp8YKrACGBnH_3w9i06vel88pYN2XdoKH0_7d2isO48pruUj5FCaqkawL7VYlAsVHmLbmXwNDotnFHdQJ1_JEUFFGEpngcLvnF8i_ELPhIzPq8'
+        },
+        success: function(data, status) {
+        console.log(data);
+        for (var p = 0; p < data.playlists.items.length; p++) {
+          var item = data.playlists.items[p];
+          $(".container").append(
+            $("<p>").append($("<img>").attr("src", item.images[0].url))
+            )
+            
+            console.log("Okay");
+        }
+      },
+      error: function(xhr) {
+        var response = JSON.parse(xhr.responseText);
+        console.log(response.error.message);
+      },
+      complete: function(data,status) {
+      },
+   });
+});
+
+$.ajax({
+  method: 'GET',
+  data: {
+    'q': 'beyonce',
+    'type': 'artist'
+  }
+}
+);
+
+        </script>
+        
+        <input id="search" name="search" value="" />
+        
+        <script>
+            var search = $('#search').val();
+            console.log(search);
+        </script>
+    </body>
+</html>

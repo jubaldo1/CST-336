@@ -7,3 +7,6 @@ composer.phar
 .c9/
 .git-real
 .git-pract
+composer.phar
+composer.lock #this is optional
+/vendor/ #don't do anything under vendor

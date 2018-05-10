@@ -100,4 +100,106 @@
 
 </body>
 
+</html><!DOCTYPE html>
+<html>
+
+<head>
+    <title>Contact List</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="contact.css">
+    <script src="contact.js"></script>
+    <!--Reference jQuery-->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    
+    
+<div class="container">
+    <div class="card card-default" id="card_contacts">
+        <div id="contacts" class="panel-collapse collapse show" aria-expanded="true" style="">
+            <ul class="list-group pull-down" id="contact-list">
+                <script>
+                        var contacts = [{
+                            id: 0,
+                            name: "Mike Anamendolla",
+                            address: "5842 Hillcrest Rd",
+                            email: "mike.ana@example.com",
+                            phone: "(870) 288-4149",
+                            pictureUrl: "http://demos.themes.guide/bodeo/assets/images/users/m101.jpg"
+                        }, {
+                            id: 1,
+                            name: "Mike Anamendolla",
+                            address: "5842 Hillcrest Rd",
+                            email: "mike.ana@example.com",
+                            phone: "(870) 288-4149",
+                            pictureUrl: "http://demos.themes.guide/bodeo/assets/images/users/m101.jpg"
+                        }, {
+                            id: 2,
+                            name: "Rosemary Porter",
+                            address: "5267 Cackson St",
+                            email: "rosemary.porter@example.com",
+                            phone: "(497) 160-9776",
+                            pictureUrl: "http://demos.themes.guide/bodeo/assets/images/users/w102.jpg"
+                        }];
+
+                        for (var c in contacts) {
+                        var contact = contacts[c];
+                        printContact(c, contact);
+                        }
+                        
+                        function onNameClick(label) {
+                        var index = label.getAttribute("data-index");
+                        var contact = contacts[index];
+                        $('div.details-data').html(contact.phone);
+                        $('div.details').removeClass("hidden");
+                        }
+                        
+                        function onDoneClick(a) {
+                        var modalDiv = document.querySelector('div.details');
+                        modalDiv.classList.add('hidden');
+                        }
+                        
+                    </script>
+            </ul>
+            <!--/contacts list-->
+        </div>
+    </div>
+    <!-- contacts card -->
+
+</div>
+<style>
+        
+    .hidden 
+    {
+        display: none !important;
+    }
+
+    .details 
+    {
+        position: absolute;
+        left:25%;
+        top:25%;
+        background: white;
+        width: 50%;
+        margin: 20px;
+        padding: 20px;
+        border: 1px solid black;
+        z-index: 100; /* Make sure it is on top */
+    }
+    </style>
+    <div class="hidden details">
+      <div class="details-data">
+          Put Phone Here
+      </div>
+      <a href="#" onclick="onDoneClick(this);">Done</a>
+    </div>
+    
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+</body>
+
 </html>
