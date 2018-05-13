@@ -1,12 +1,58 @@
 <?php 
     include "DBConnection.php";
+    
+    $httpMethod = strtoupper($_SERVER['REQUEST_METHOD']);
+
+    switch($httpMethod) {
+      case "OPTIONS":
+        header("Access-Control-Allow-Headers: X-ACCESS_TOKEN, Access-Control-Allow-Origin, Authorization, Origin, X-Requested-With, Content-Type, Content-Range, Content-Disposition, Content-Description");
+        header("Access-Control-Allow-Methods: POST, GET");
+        header("Access-Control-Max-Age: 3600");
+        exit();
+      case "GET":
+        // Allow any client to access
+        header("Access-Control-Allow-Origin: *");
+        // Let the client know the format of the data being returned
+        header("Content-Type: application/json");
+
+        // TODO: do stuff to get the $results which is an associative array
+        $results = array();
+
+        // Sending back down as JSON
+        echo json_encode($results);
+
+        break;
+      case 'POST':
+        // Get the body json that was sent
+        $rawJsonString = file_get_contents("php://input");
+
+        //var_dump($rawJsonString);
+
+        // Make it a associative array (true, second param)
+        $jsonData = json_decode($rawJsonString, true);
+
+        // TODO: do stuff to get the $results which is an associative array
+        $results = array();
+
+        // Allow any client to access
+        header("Access-Control-Allow-Origin: *");
+        // Let the client know the format of the data being returned
+        header("Content-Type: application/json");
+
+        // Sending back down as JSON
+        echo json_encode($results);
+
+        break;
+        break;
+    }
+    
     $conn = getDataBaseConnection(`final`);
 ?>
 
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Add Time Slots</title>
+        <title>Schedule Time</title>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
         <link rel="stylesheet" href="css/style.css">
         <script src="func.js"></script>
@@ -17,10 +63,11 @@
         </script>
     </head>
     <body>
+        <img src="" alt="banner">
         <script>
             display();
         </script>
-        <form method="post" action="schedule.php">
+        <form method="post" action="addTimeSlot.php">
             Start Date: <input type = "text" name="startDate"><br>
               End Date: <input type = "text" name="endDate"><br>
             Start Time: 
@@ -45,7 +92,7 @@
                 <option value="8">8</option>
             </select><br>
             
-            <input type="submit" name="submit" value="Add Times">
+            <button id="submit" value="Add Times" onclick="onSubmitClick(event)">Add Times</button>
             <?php
                 if (isset($_POST['startDate']))
                 { $startDate = $_POST['startDate']; }
@@ -68,6 +115,23 @@
                 }
             ?>    
         </form>
-       
+       <?php
+            if (isset($_POST['uploadForm'])) {
+                if ($_FILES["fileName"]["error"] > 0) {
+                    echo "Error: " . $_FILES["fileName"]["error"] . "<br>";
+                }
+                else {
+                  echo "Upload: " . $_FILES["fileName"]["name"] . "<br>";
+                  echo "Type: " . $_FILES["fileName"]["type"] . "<br>";
+                  echo "Size: " . ($_FILES["fileName"]["size"] / 1024) . " KB<br>";
+                  echo "Stored in: " . $_FILES["fileName"]["tmp_name"];
+                }  
+            }//endIf form submission
+        ?>
+        <form method="POST" enctype="multipart/form-data"> 
+            Select file: <input type="file" name="fileName" /> <br />
+            <input type="submit"  name="uploadForm" value="Upload File" /> 
+        </form>
+
     </body>
 </html>

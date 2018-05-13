@@ -23,3 +23,7 @@ function display()
 {
     $("body").append($.attr("<h3>").html("Final"));
 }
+
+function onSubmitClick(e) {
+    window.location.href="addTimeSlot.php";
+}
